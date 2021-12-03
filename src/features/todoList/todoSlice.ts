@@ -15,7 +15,7 @@ const todoSlice = createSlice({
         toggleTodo(state, action: PayloadAction<Todo>) {
             let todo = state.find(todo => todo.id === action.payload.id);
             if (todo) {
-                todo.compeleted = !todo.compeleted;
+                todo.completed = !todo.completed;
             }
         }
     }
@@ -26,7 +26,7 @@ export const { toggleTodo } = todoSlice.actions;
 export const addTodo = (text: string): AppThunk => async (dispatch: AppDispatch) => {
     const newTodo: Todo = {
         id: Math.random().toString(36).substr(2, 9),
-        compeleted: false,
+        completed: false,
         text: text,
     }
     dispatch(todoSlice.actions.addTodo(newTodo));
