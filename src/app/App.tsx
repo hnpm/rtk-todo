@@ -1,10 +1,11 @@
+import AddTodo from 'features/todoList/AddTodo';
 import React from 'react';
 import './App.css';
 
 function App() {
   return (
     <div>
-      Hello World
+      <AddTodo />
     </div>
   );
 }
