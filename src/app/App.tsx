@@ -1,5 +1,6 @@
 import AddTodo from 'features/todoList/AddTodo';
 import TodoList from 'features/todoList/TodoList';
+import Footer from 'features/visibilityFilter/Footer';
 import React from 'react';
 import './App.css';
 
@@ -8,6 +9,7 @@ function App() {
     <div>
       <AddTodo />
       <TodoList />
+      <Footer />
     </div>
   );
 }
